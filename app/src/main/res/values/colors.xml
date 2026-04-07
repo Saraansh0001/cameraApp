@@ -2,4 +2,32 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Clean Professional Blue & Neutral Palette (Strictly No Purple) -->
+    <color name="primary">#1976D2</color> <!-- Strong Blue -->
+    <color name="onPrimary">#FFFFFF</color>
+
+    <!-- These "Containers" are often the "boxes" you see behind text -->
+    <color name="primaryContainer">#F0F4F8</color> <!-- Very Light Grey-Blue -->
+    <color name="onPrimaryContainer">#1976D2</color>
+
+    <color name="secondary">#455A64</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="secondaryContainer">#F5F5F5</color> <!-- Neutral Light Grey (Removes tinted box look) -->
+    <color name="onSecondaryContainer">#212121</color>
+
+    <color name="tertiary">#455A64</color>
+    <color name="onTertiary">#FFFFFF</color>
+    <color name="tertiaryContainer">#F5F5F5</color>
+    <color name="onTertiaryContainer">#212121</color>
+
+    <color name="surface">#FFFFFF</color>
+    <color name="onSurface">#212121</color>
+    <color name="surfaceVariant">#FFFFFF</color> <!-- White surfaces to avoid any tinted boxes -->
+    <color name="onSurfaceVariant">#424242</color>
+
+    <color name="outline">#E0E0E0</color> <!-- Light grey for subtle borders -->
+
+    <color name="error">#D32F2F</color>
+    <color name="onError">#FFFFFF</color>
 </resources>

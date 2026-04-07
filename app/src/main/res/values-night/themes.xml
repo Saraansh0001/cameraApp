@@ -1,7 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme for Dark mode. -->
     <style name="Base.Theme.CameraApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primaryContainer</item>
+        <item name="colorOnPrimary">@color/onPrimaryContainer</item>
+
+        <item name="colorSecondary">@color/secondaryContainer</item>
+        <item name="colorOnSecondary">@color/onSecondaryContainer</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/onError</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
     </style>
 </resources>
