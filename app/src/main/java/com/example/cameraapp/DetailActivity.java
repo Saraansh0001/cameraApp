@@ -2,6 +2,7 @@ package com.example.cameraapp;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.DocumentsContract;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.documentfile.provider.DocumentFile;
@@ -62,9 +63,15 @@ public class DetailActivity extends AppCompatActivity {
 
         if (path.startsWith("content://")) {
             // Handle Scoped Storage / Document Tree URIs
-            DocumentFile docFile = DocumentFile.fromSingleUri(this, Uri.parse(path));
-            if (docFile != null && docFile.exists()) {
-                deleted = docFile.delete();
+            try {
+                Uri uri = Uri.parse(path);
+                deleted = DocumentsContract.deleteDocument(getContentResolver(), uri);
+            } catch (Exception e) {
+                // Fallback to DocumentFile if DocumentsContract fails or is not applicable
+                DocumentFile docFile = DocumentFile.fromSingleUri(this, Uri.parse(path));
+                if (docFile != null && docFile.exists()) {
+                    deleted = docFile.delete();
+                }
             }
         } else {
             // Handle regular Files

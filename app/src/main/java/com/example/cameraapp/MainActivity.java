@@ -84,8 +84,12 @@ public class MainActivity extends AppCompatActivity {
                 if (result.getResultCode() == RESULT_OK) {
                     if (selectedFolderUri != null) {
                         loadImagesFromFolder(selectedFolderUri);
-                    } else if (currentPhotoPath != null) {
-                        refreshGalleryFromPath(new File(currentPhotoPath).getParent());
+                    } else {
+                        // Refresh default pictures directory
+                        File picDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+                        if (picDir != null) {
+                            refreshGalleryFromPath(picDir.getAbsolutePath());
+                        }
                     }
                 }
             });
